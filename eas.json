@@ -1,0 +1,46 @@
+{
+  "cli": {
+    "version": ">= 16.28.0",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "channel": "development",
+      "env": {
+        "EXPO_PUBLIC_ENVIRONMENT": "development",
+        "APP_BASE_NAME": "Boilerworks",
+        "APP_BASE_SLUG": "boilerworks-test",
+        "APP_BASE_BUNDLE_ID": "com.boilerworks.app.develop",
+        "APP_BASE_PACKAGE": "com.boilerworks.app.develop",
+        "EAS_OWNER": "your-eas-owner"
+      }
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "preview",
+      "env": {
+        "EXPO_PUBLIC_ENVIRONMENT": "staging",
+        "APP_BASE_NAME": "Boilerworks",
+        "APP_BASE_SLUG": "boilerworks-mobile",
+        "APP_BASE_BUNDLE_ID": "com.boilerworks.app.staging",
+        "APP_BASE_PACKAGE": "com.boilerworks.app.staging"
+      }
+    },
+    "production": {
+      "autoIncrement": true,
+      "channel": "production",
+      "env": {
+        "EXPO_PUBLIC_ENVIRONMENT": "production",
+        "APP_BASE_NAME": "Boilerworks",
+        "APP_BASE_SLUG": "boilerworks-mobile",
+        "APP_BASE_BUNDLE_ID": "com.boilerworks.app",
+        "APP_BASE_PACKAGE": "com.boilerworks.app"
+      }
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}

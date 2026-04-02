@@ -1,0 +1,166 @@
+{
+  "accessibilityGenerics": {
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "goBack": "Navigate to previous screen"
+  },
+
+  "auth": {
+    "logIn": "Log in",
+    "createAccount": "Create account",
+    "forgotPassword": {
+      "intro": "Please enter your email and we'll send you a reset link.",
+      "confirmation": "If <email>{{email}}</email> is registered, we'll send you an email with instructions and a password reset link."
+    },
+    "login": {
+      "welcomeBack": "Welcome back!",
+      "logIn": "Log in",
+      "dontHaveAccount": "Don't have an account? Sign up",
+      "forgotPassword": "Forgot password?",
+      "orLoginWith": "or login with",
+      "google": "Continue with Google",
+      "apple": "Continue with Apple",
+      "fields": {
+        "email": { "label": "Email" },
+        "password": { "label": "Password" }
+      },
+      "errors": {
+        "invalidCredentials": "Invalid email or password. Please try again.",
+        "timeout": "The request timed out. Please check your connection and try again.",
+        "networkError": "No internet connection. Please check your connection and try again.",
+        "serverError": "Something went wrong on our end. Please try again later.",
+        "unknown": "An unexpected error occurred. Please try again."
+      }
+    },
+    "register": {
+      "title": "Create an account",
+      "subtitle": "Get started today.",
+      "description": "Create your account to get started.",
+      "createAccount": "Create account",
+      "privacyText": "By creating an account, you agree to our privacy policy and acknowledge",
+      "termsOfUse": "our terms of use",
+      "haveAccount": "Have an account? Sign in",
+      "orSignInWith": "or sign in with",
+      "google": "Continue with Google",
+      "apple": "Continue with Apple",
+      "fields": {
+        "email": { "label": "Email" },
+        "password": { "label": "Password" }
+      },
+      "errors": {
+        "signupFailed": "Something went wrong. Please try again.",
+        "autoLoginFailedTitle": "Account created",
+        "autoLoginFailedMessage": "Your account was created but we couldn't sign you in automatically. Please log in.",
+        "autoLoginFailedCta": "Log in"
+      }
+    },
+    "quotes": [
+      {
+        "title": "Build something great.",
+        "chip": "Get started",
+        "content": "The journey of a thousand miles begins with a single step.",
+        "meta": ""
+      },
+      {
+        "title": "Your work matters.",
+        "chip": "Keep going",
+        "content": "Small steps every day lead to big results over time.",
+        "meta": ""
+      }
+    ]
+  },
+
+  "home": {
+    "header": {
+      "title": "Hello {{name}}!",
+      "subtitle": "Welcome back",
+      "accessibility": {
+        "notifications": {
+          "label": "Notifications",
+          "hint": "View your notifications"
+        },
+        "calendar": {
+          "label": "Calendar",
+          "hint": "Open calendar"
+        }
+      }
+    },
+    "gettingStarted": {
+      "title": "Getting Started",
+      "subtitle": "Build your app on top of this scaffold",
+      "steps": {
+        "theme": "Customise theme & colors",
+        "screens": "Add your screens",
+        "api": "Wire up your API",
+        "auth": "Configure authentication"
+      }
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "components": "Component Library",
+      "componentsDesc": "Buttons, inputs, cards & more",
+      "theme": "Theme System",
+      "themeDesc": "Light & dark, styled-components",
+      "navigation": "Navigation",
+      "navigationDesc": "Stack, tabs & auth routing"
+    },
+    "stack": {
+      "title": "Tech Stack",
+      "expo": "Expo SDK",
+      "rn": "React Native",
+      "ts": "TypeScript",
+      "redux": "Redux Toolkit",
+      "i18n": "i18next"
+    }
+  },
+
+  "settings": {
+    "title": "Settings",
+    "termsPrivacy": "Terms & Privacy Policy",
+    "theme": "Theme",
+    "language": "Language",
+    "logout": "Log Out",
+    "deleteAccount": "Delete Account",
+    "version": "Version",
+    "deleteConfirmation": {
+      "title": "Delete Account",
+      "message": "Are you sure you want to delete your account? This action cannot be undone.",
+      "cancel": "Cancel",
+      "confirm": "Delete"
+    },
+    "themeOptions": {
+      "title": "Choose Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "cancel": "Cancel"
+    },
+    "languageOptions": {
+      "title": "Choose Language",
+      "english": "English",
+      "spanish": "Español",
+      "cancel": "Cancel"
+    }
+  },
+
+  "navigation": {
+    "home": "Home",
+    "preview": "Preview",
+    "resources": "Resources",
+    "more": "More",
+    "track": "Track"
+  },
+
+  "common": {
+    "back": "Back",
+    "next": "Next"
+  },
+
+  "button": {
+    "button": "Button",
+    "loading": "Loading"
+  },
+
+  "terms": {
+    "title": "Terms of Use"
+  }
+}

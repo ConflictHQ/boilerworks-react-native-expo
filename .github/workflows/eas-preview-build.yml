@@ -1,0 +1,50 @@
+name: EAS Preview Build
+
+on:
+    push:
+        branches: [main]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: npm
+                  cache-dependency-path: package-lock.json
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Setup EAS
+              uses: expo/expo-github-action@v8
+              with:
+                  eas-version: latest
+                  token: ${{ secrets.EXPO_AUTH_TOKEN }}
+
+            - name: Remove existing eas.json
+              run: rm -f eas.json
+
+            - name: Generate eas.json
+              run: node scripts/generate-eas-config.js
+              env:
+                  EAS_OWNER: ${{ vars.EAS_OWNER }}
+                  EAS_PROJECT_ID: ${{ vars.EAS_PROJECT_ID }}
+                  APP_BASE_NAME: ${{ vars.APP_BASE_NAME }}
+                  APP_BASE_SLUG: ${{ vars.APP_BASE_SLUG }}
+                  APP_BASE_BUNDLE_ID: ${{ vars.APP_BASE_BUNDLE_ID }}
+                  APP_BASE_PACKAGE: ${{ vars.APP_BASE_PACKAGE }}
+
+            - name: Publish preview update
+              run: eas update --branch development --message "${{ github.event.head_commit.message }}"
+              env:
+                  EAS_OWNER: ${{ vars.EAS_OWNER }}
+                  EAS_PROJECT_ID: ${{ vars.EAS_PROJECT_ID }}
+                  APP_BASE_NAME: ${{ vars.APP_BASE_NAME }}
+                  APP_BASE_SLUG: ${{ vars.APP_BASE_SLUG }}
+                  APP_BASE_BUNDLE_ID: ${{ vars.APP_BASE_BUNDLE_ID }}
+                  APP_BASE_PACKAGE: ${{ vars.APP_BASE_PACKAGE }}

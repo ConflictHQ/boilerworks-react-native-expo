@@ -1,0 +1,166 @@
+{
+  "accessibilityGenerics": {
+    "showPassword": "Mostrar contraseña",
+    "hidePassword": "Ocultar contraseña",
+    "goBack": "Navegar a la pantalla anterior"
+  },
+
+  "auth": {
+    "logIn": "Iniciar sesión",
+    "createAccount": "Crear cuenta",
+    "forgotPassword": {
+      "intro": "Por favor, introduce tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.",
+      "confirmation": "Si <email>{{email}}</email> está registrado, te enviaremos un correo con instrucciones y un enlace para restablecer la contraseña."
+    },
+    "login": {
+      "welcomeBack": "¡Bienvenido de nuevo!",
+      "logIn": "Iniciar sesión",
+      "dontHaveAccount": "¿No tienes cuenta? Regístrate",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "orLoginWith": "o inicia sesión con",
+      "google": "Continuar con Google",
+      "apple": "Continuar con Apple",
+      "fields": {
+        "email": { "label": "Correo electrónico" },
+        "password": { "label": "Contraseña" }
+      },
+      "errors": {
+        "invalidCredentials": "Correo o contraseña incorrectos. Por favor, inténtalo de nuevo.",
+        "timeout": "La solicitud expiró. Por favor, comprueba tu conexión.",
+        "networkError": "Sin conexión a internet. Por favor, comprueba tu conexión.",
+        "serverError": "Algo salió mal de nuestro lado. Por favor, inténtalo más tarde.",
+        "unknown": "Ocurrió un error inesperado. Por favor, inténtalo de nuevo."
+      }
+    },
+    "register": {
+      "title": "Crear una cuenta",
+      "subtitle": "Comienza hoy.",
+      "description": "Crea tu cuenta para comenzar.",
+      "createAccount": "Crear cuenta",
+      "privacyText": "Al crear una cuenta, aceptas nuestra política de privacidad y reconoces",
+      "termsOfUse": "nuestros términos de uso",
+      "haveAccount": "¿Tienes una cuenta? Inicia sesión",
+      "orSignInWith": "o inicia sesión con",
+      "google": "Continuar con Google",
+      "apple": "Continuar con Apple",
+      "fields": {
+        "email": { "label": "Correo electrónico" },
+        "password": { "label": "Contraseña" }
+      },
+      "errors": {
+        "signupFailed": "Algo salió mal. Por favor, inténtalo de nuevo.",
+        "autoLoginFailedTitle": "Cuenta creada",
+        "autoLoginFailedMessage": "Tu cuenta fue creada pero no pudimos iniciarte sesión automáticamente. Por favor, inicia sesión.",
+        "autoLoginFailedCta": "Iniciar sesión"
+      }
+    },
+    "quotes": [
+      {
+        "title": "Construye algo grandioso.",
+        "chip": "Comenzar",
+        "content": "El viaje de mil millas comienza con un solo paso.",
+        "meta": ""
+      },
+      {
+        "title": "Tu trabajo importa.",
+        "chip": "Seguir adelante",
+        "content": "Pequeños pasos cada día llevan a grandes resultados.",
+        "meta": ""
+      }
+    ]
+  },
+
+  "home": {
+    "header": {
+      "title": "¡Hola {{name}}!",
+      "subtitle": "Bienvenido de nuevo",
+      "accessibility": {
+        "notifications": {
+          "label": "Notificaciones",
+          "hint": "Ver tus notificaciones"
+        },
+        "calendar": {
+          "label": "Calendario",
+          "hint": "Abrir calendario"
+        }
+      }
+    },
+    "gettingStarted": {
+      "title": "Primeros pasos",
+      "subtitle": "Construye tu app sobre este scaffold",
+      "steps": {
+        "theme": "Personaliza el tema y colores",
+        "screens": "Añade tus pantallas",
+        "api": "Conecta tu API",
+        "auth": "Configura la autenticación"
+      }
+    },
+    "quickLinks": {
+      "title": "Accesos rápidos",
+      "components": "Librería de componentes",
+      "componentsDesc": "Botones, inputs, tarjetas y más",
+      "theme": "Sistema de temas",
+      "themeDesc": "Claro y oscuro, styled-components",
+      "navigation": "Navegación",
+      "navigationDesc": "Stack, tabs y rutas de autenticación"
+    },
+    "stack": {
+      "title": "Stack tecnológico",
+      "expo": "Expo SDK",
+      "rn": "React Native",
+      "ts": "TypeScript",
+      "redux": "Redux Toolkit",
+      "i18n": "i18next"
+    }
+  },
+
+  "settings": {
+    "title": "Ajustes",
+    "termsPrivacy": "Términos y política de privacidad",
+    "theme": "Tema",
+    "language": "Idioma",
+    "logout": "Cerrar sesión",
+    "deleteAccount": "Eliminar cuenta",
+    "version": "Versión",
+    "deleteConfirmation": {
+      "title": "Eliminar cuenta",
+      "message": "¿Estás seguro de que quieres eliminar tu cuenta? Esta acción no se puede deshacer.",
+      "cancel": "Cancelar",
+      "confirm": "Eliminar"
+    },
+    "themeOptions": {
+      "title": "Elegir tema",
+      "light": "Claro",
+      "dark": "Oscuro",
+      "cancel": "Cancelar"
+    },
+    "languageOptions": {
+      "title": "Elegir idioma",
+      "english": "English",
+      "spanish": "Español",
+      "cancel": "Cancelar"
+    }
+  },
+
+  "navigation": {
+    "home": "Inicio",
+    "preview": "Preview",
+    "resources": "Recursos",
+    "more": "Más",
+    "track": "Registrar"
+  },
+
+  "common": {
+    "back": "Atrás",
+    "next": "Siguiente"
+  },
+
+  "button": {
+    "button": "Botón",
+    "loading": "Cargando"
+  },
+
+  "terms": {
+    "title": "Términos de uso"
+  }
+}
