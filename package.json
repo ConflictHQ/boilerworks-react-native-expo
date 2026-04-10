@@ -1,6 +1,8 @@
 {
-  "name": "boilerworks",
+  "name": "boilerworks-react-native-expo",
   "version": "1.0.0",
+  "description": "Expo React Native + TypeScript template with styled-components theming, Redux Toolkit + Apollo Client, React Navigation, i18next, and JWT auth with proactive refresh.",
+  "license": "MIT",
   "main": "index.tsx",
   "scripts": {
     "postinstall": "patch-package",
