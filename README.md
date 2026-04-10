@@ -34,6 +34,14 @@ Install **Expo Go** on a physical device to preview the running app:
 [<img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" height="40">](https://apps.apple.com/app/expo-go/id982107779)
 [<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="40">](https://play.google.com/store/apps/details?id=host.exp.exponent)
 
+### Shareable preview QR (after publishing with EAS Update)
+
+Once you've published an update with `eas update`, swap the placeholders below for your own IDs to render a scannable QR badge for your preview build:
+
+![Expo QR (development)](https://qr.expo.dev/eas-update?projectId=YOUR_EAS_PROJECT_ID&channelId=YOUR_CHANNEL_ID)
+
+Replace `YOUR_EAS_PROJECT_ID` with the value of `EAS_PROJECT_ID` from your `.env` (also visible in the EAS dashboard), and `YOUR_CHANNEL_ID` with the channel ID from the `eas update` output. Until then the badge will render as a broken image — that's expected.
+
 ## Commands
 
 ```bash
