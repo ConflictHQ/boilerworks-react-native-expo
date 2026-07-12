@@ -20,7 +20,7 @@
     "optimize-images:dry": "yarn node scripts/optimize-images.js --dry-run"
   },
   "dependencies": {
-    "@apollo/client": "^3.13.4",
+    "@apollo/client": "^4.2.6",
     "@expo-google-fonts/inter": "^0.4.2",
     "@expo-google-fonts/playfair-display": "^0.4.2",
     "@expo/metro-runtime": "~6.1.0",
