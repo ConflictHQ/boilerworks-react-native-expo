@@ -54,7 +54,6 @@ yarn format             # Prettier (write)
 yarn format:check       # Prettier (check) — used in CI
 yarn test               # Jest
 yarn test:watch         # Jest watch mode
-yarn reset-project      # Wipe template artifacts from src/
 yarn optimize-images    # Compress PNGs under src/assets/images/
 ```
 

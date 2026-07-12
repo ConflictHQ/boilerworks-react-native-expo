@@ -48,7 +48,7 @@ For deeper architectural context (layer dependency rules, theme data flow, token
 | `src/theme/`      | Light/dark themes, `styled-components` module augmentation, `useThemeValues()`                                |
 | `src/store/`      | Redux slices (`auth`, `onboarding`, `signup`), typed selectors, `classifyApiError`, `storePurge`             |
 | `src/api/`        | `apiClient`, `apolloClient`, endpoint config, response models (`models/`), request types (`requests/`)       |
-| `src/contexts/`   | App-level state (e.g. `AuthContext`)                                                                          |
+| `src/contexts/`   | App-level state (e.g. `PageMainScrollContext`)                                                                |
 | `src/i18n/`       | i18next setup + `en.json` / `es.json` locale files                                                           |
 | `src/hooks/`      | Custom React hooks — import directly from the file (no barrel export)                                         |
 | `src/storage/`    | `authStorage` (expo-secure-store), `languageStorage`, `secureStoreAdapter` (redux-persist WebStorage adapter) |
@@ -76,8 +76,6 @@ Common reusable component folder layout (examples: `src/components/Button/`, `sr
 Notes:
 
 - Many components also `export { <VariantType>, <SizeType> }` from `index.tsx` (see `src/components/Button/index.tsx`).
-- Small / shared components may be single files directly under `src/components/` (e.g. `src/components/ParallaxScrollView.tsx`).
-- Platform-specific components use file suffixes (e.g. `src/components/ui/TabBarBackground.ios.tsx`).
 - Complex / compound components have nested subcomponents as subfolders (example: `src/components/Carousel/`):
   - Root: `Carousel/index.tsx`, `styled.ts`, `types.ts`, `theme.ts`
   - Subcomponents: `Carousel/CarouselItem/`, `Carousel/CarouselPagination/`, `Carousel/PaginationDot/` (each typically `index.tsx` + `styled.ts`)
@@ -147,7 +145,7 @@ Conventions used in styled files:
 ### Screens
 
 - Screens live in `src/screens/` and are exported as named screen components (e.g. `export const SettingsScreen = ...`) or default exports (e.g. `src/screens/AuthScreen/index.tsx`).
-- Simple screens may define `styled.*` components inline (e.g. `src/screens/HomeScreen.tsx`).
+- Simple screens may define `styled.*` components inline (e.g. `src/screens/Home/index.tsx`).
 - Complex screens have `components/` subfolders with `index.tsx` + `styled.ts` per subcomponent (e.g. `src/screens/AuthScreen/components/*`).
 - Screen module pattern example: `src/screens/AuthScreen/`
   - Entry: `index.tsx` (screen container + orchestration)
@@ -158,7 +156,7 @@ Conventions used in styled files:
 ### Navigation
 
 - Root navigation in `src/navigation/AppNavigator.tsx` using `createStaticNavigation` + `createNativeStackNavigator`.
-- Auth/app routing gated by auth hooks from `src/contexts/AuthContext.tsx` (`useIsSignedIn`, `useIsSignedOut`).
+- Auth/app routing gated by auth hooks from `src/store/auth/hooks.ts` (`useIsAuthenticated`, `useIsUnauthenticated`, `useIsOnboarding`) — auth state lives in the Redux `auth` slice, not a context.
 - Navigation typing:
   - Param list is derived from the static navigator: `src/navigation/types/RootTypes.ts` exports `RootStackParamList = StaticParamList<typeof RootStack>`.
   - Global React Navigation augmentation lives in `src/navigation/types/types.d.ts` (`ReactNavigation.RootParamList extends RootStackParamList`), so `useNavigation()` / `navigation.navigate(...)` pick up these types.
@@ -609,6 +607,5 @@ yarn format:check     # Prettier (check) — used in CI
 yarn test             # Jest
 yarn test:watch       # Jest watch mode
 yarn test:ci          # Jest CI mode
-yarn reset-project    # Wipe template artifacts from src/
 yarn optimize-images  # Compress PNGs under src/assets/images/
 ```

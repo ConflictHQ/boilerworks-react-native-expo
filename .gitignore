@@ -25,6 +25,10 @@ npm-debug.*
 yarn-debug.*
 yarn-error.*
 
+# Yarn local caches (never commit)
+.yarn/install-state.gz
+.yarn/cache
+
 # macOS
 .DS_Store
 *.pem
