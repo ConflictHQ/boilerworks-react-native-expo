@@ -61,7 +61,7 @@ A fuller description lives in the "Known Stubs" section of [`README.md`](README.
 
 ## Template conventions (family-wide)
 
-This template ships with the standard Boilerworks baseline: `LICENSE` (MIT, Copyright Conflict LLC), `CODE_OF_CONDUCT.md` (Contributor Covenant), `SECURITY.md` (security@weareconflict.com), `CONTRIBUTING.md`, `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `bootstrap.md`, and this `memory.md`. All sibling Boilerworks repos follow the same pattern — see `../boilerworks-hono-micro`, `../boilerworks-django-micro`, etc. for references.
+This template ships with the standard Boilerworks baseline: `LICENSE` (MIT, Copyright Conflict LLC), `CODE_OF_CONDUCT.md` (Contributor Covenant), `SECURITY.md` (security@weareconflict.com), `CONTRIBUTING.md`, `AGENTS.md`, `CLAUDE.md`, `bootstrap.md`, and this `memory.md`. All sibling Boilerworks repos follow the same pattern — see `../boilerworks-hono-micro`, `../boilerworks-django-micro`, etc. for references.
 
 - Commits: single-line conventional-commit subjects. No body. No AI co-authorship lines. Ever.
 - No rebases.
